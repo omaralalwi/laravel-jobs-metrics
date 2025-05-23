@@ -8,7 +8,7 @@ Tracks job memory consumption and execution time — works with or without Horiz
 
 <p align="center">
   <a href="https://omaralalwi.github.io/laravel-jobs-metrics" target="_blank">
-    <img src="https://raw.githubusercontent.com/omaralalwi/laravel-jobs-metrics/master/public/images/laravel-jobs-metrics.png" alt="laravel jobs metrics" width="600">
+    <img src="https://raw.githubusercontent.com/omaralalwi/laravel-jobs-metrics/master/public/images/laravel-jobs-metrics.png" alt="laravel jobs metrics">
   </a>
 </p>
 
