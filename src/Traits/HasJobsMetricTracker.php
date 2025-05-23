@@ -14,15 +14,17 @@ trait HasJobsMetricTracker
     public function middleware()
     {
         $middleware = [new JobsMetricTracker];
-        
-        // If parent has middleware method, merge with it
-        if (method_exists(get_parent_class($this), 'middleware')) {
+
+        $parent = get_parent_class($this);
+
+        if ($parent && method_exists($parent, 'middleware')) {
             $parentMiddleware = parent::middleware();
             if (is_array($parentMiddleware)) {
                 return array_merge($middleware, $parentMiddleware);
             }
         }
-        
+
         return $middleware;
     }
+
 }
