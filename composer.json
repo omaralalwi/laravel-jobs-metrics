@@ -1,0 +1,79 @@
+{
+    "name": "omaralalwi/laravel-jobs-metrics",
+    "description": "Tracks job memory consumption — works with or without Horizon, and enables long-term performance analysis via database logging.",
+    "keywords": [
+        "laravel",
+        "queue",
+        "jobs",
+        "job metrics",
+        "queue metrics",
+        "performance monitoring",
+        "memory tracking",
+        "execution time",
+        "laravel horizon",
+        "job monitoring",
+        "laravel queue",
+        "laravel job tracker",
+        "laravel job metrics",
+        "horizon extension",
+        "background jobs",
+        "laravel performance",
+        "omaralalwi"
+    ],
+    "homepage": "https://github.com/omaralalwi/laravel-jobs-metrics",
+    "license": "MIT",
+    "type": "library",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "omar alalwi",
+            "email": "omaralwi2010@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/omaralalwi/laravel-jobs-metrics/issues",
+        "source": "https://github.com/omaralalwi/laravel-jobs-metrics"
+    },
+    "require": {
+        "php": "^7.4|^8.0|^8.1|^8.2|^8.3",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/console": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/database": "^8.0|^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0",
+        "phpunit/phpunit": "^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omaralalwi\\JobsMetrics\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omaralalwi\\JobsMetrics\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "check-style": "phpcs -p --standard=PSR12 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR12 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Omaralalwi\\JobsMetrics\\JobsMetricsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
